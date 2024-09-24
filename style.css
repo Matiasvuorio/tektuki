@@ -31,8 +31,9 @@ header .logo {
     width: 150px;
     position: relative;
     overflow-x: hidden;
-    max-width: 100%;
 }
+nav{
+    max-width: 100%;
 section{
     background: white;
     color: black;
