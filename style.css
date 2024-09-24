@@ -101,9 +101,10 @@ h1{
     position: absolute;
     margin: 20px;
     width: 150px;
-    font-size: clamp(16px, 5vw, 68px);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-size: clamp(16px, 5vw, 48px);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 
 .tausta{
     background-image: url('workspace-1280538_1920.jpg');
@@ -122,8 +123,21 @@ h1{
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     font-size: clamp(16px, 10vw, 48px);
+    max-height: 100%;
 }
 img{
     width: 100%;
     flex: 1;
 }
+
+@keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+/*animation: slideIn 1s ease-out forwards;
