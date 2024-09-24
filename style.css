@@ -121,7 +121,7 @@ h1{
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    font-size: clamp(16px, 10vw, 68px);
+    font-size: clamp(16px, 10vw, 48px);
 }
 img{
     width: 100%;
