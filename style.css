@@ -184,6 +184,9 @@ h3{
     background-repeat: no-repeat;
     height: 70vh;
     position: relative;
+    @media (max-width: 425px) {
+        height: 650px;
+    }
 }
 .tausta h1{
     color: white;
@@ -195,6 +198,10 @@ h3{
     padding: 20px;
     font-size: clamp(16px, 10vw, 48px);
     max-height: 100%;
+
+    @media (max-width: 425px) {
+        margin-left: 14%;
+    }
 }
 img{
     width: 100%;
