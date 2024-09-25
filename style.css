@@ -36,31 +36,35 @@ header .logo {
 }
 nav{
     max-width: 100%;
+    position: static;
+    z-index: 1000;
+    top: 0;
 }
 section{
     background: white;
     color: black;
     padding: 20px;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #dfdfdf;
 }
 
 .box{
     text-align: center;
-    position: relative;
     height: auto;
-    margin-top: 0;
     margin-bottom: 50px;
     flex: 1;
     overflow-x: hidden;
     max-width: 100%;
+    position: relative;
 }
+
 .box img {
     width: 100%;
+    height: auto;
     margin-top: 1%;
-    height: auto; 
     max-width: 70%;
-    position: flex;
 }
 ul {
     margin: 0;
@@ -68,10 +72,13 @@ ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    max-height: 70px;
 }
-li{
+nav li{
     display: inline-block;
-    margin: 20px;
+}
+li .logo{
+    max-height: fit-content;
 }
 .väliotsikko {
     background-color: white;
@@ -81,8 +88,10 @@ li{
     color: black;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 1px;
-    font-size: larger;;
+    font-size: larger;
+    margin-bottom: 0;
 }
+
 footer{
     background-color: #333;
     padding: 10px 20px;
@@ -109,23 +118,48 @@ h3{
     padding-bottom: 0;
     margin-bottom: 0;
 }
+.symbolit li{
+    padding: 50px;
+    list-style: none;
+}
 .symbolit{
-    display: inline;
+    display: flex;
     justify-content: space-evenly;
+    align-items: center;
     font-size: larger;
     margin-top: 0;
+    max-width: 100%;
+    height: 200px;
+    color: black;
 }
+.symbolit ion-icon{
+    background: #dfdfdf;
+    padding: 50%;
+    border-radius: 50%;
+    border: 3px solid rgb(0, 0, 0);
+}
+
 .kolmasosio{
-    background: rgb(234, 231, 226);
+    background: white;
     width: 100%;
+    max-width: fit-content;
     padding: 10%;
     justify-content: center;
     align-items: center;
-}
-.kolmasosio p{
     color: #333;
-    padding-left: 0;
-
+    letter-spacing: 1px;
+    font-size: large;
+}
+.kolmasosio img {
+    height: 100px;
+    width: 150px;
+    position: absolute;
+    left: 2%;
+    align-items: center;
+}
+.kolmasosio p {
+    padding-left: 10%;
+    justify-content: center;
 }
 .tausta{
     background-image: url('workspace-1280538_1920.jpg');
@@ -149,6 +183,18 @@ h3{
 img{
     width: 100%;
     flex: 1;
+}
+.väliotsikko h3{
+    background-color: white;
+}
+
+h3 {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 6%;
+    background-color: #dfdfdf;
 }
 
 @keyframes slideIn {
