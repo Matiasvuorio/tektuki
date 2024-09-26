@@ -205,8 +205,8 @@ justify-content: center;
     font-size: clamp(16px, 10vw, 48px);
     max-height: 100%;
 
-    @media (max-width: 425px) {
-        margin-left: 14%;
+    @media (max-width: 431px) {
+        margin-left: 12%;
     }
 }
 img{
