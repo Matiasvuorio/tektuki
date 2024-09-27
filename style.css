@@ -7,40 +7,46 @@ body{
     overflow-x: hidden;
     max-width: 100%;
 }
-header{
+header {
     background-color: #333;
-    height: 30px;
     margin-top: 0;
-    padding: 20px;
+    height: 85px;
     text-transform: uppercase;
-    justify-content: center;
-    align-items: center;
-    display: flex;
     font-family: 'Roboto', sans-serif;
-    position: relative;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    overflow: hidden;
     max-width: 100%;
-    
-}
-header .logo {
-    display: flex;
-    background-image:"logo.png";
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 50px;
-    width: 150px;
-    position: relative;
-    overflow-y: hidden;
-    max-width: 100%;
-    height: 20px;
 }
 
-nav{
+header .logo {
+    padding-bottom: 60px;
+    width: 150px;
+    overflow-y: hidden;
     max-width: 100%;
-    position: static;
-    z-index: 1000;
-    top: 0;
+    height: 45px;
+}
+header ion-icon{
+    display: inline-block;
+    margin-right: 2%;
+}
+header a{
+    height: 0px;
+    margin: 0;
+    padding: 0
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+}
+.phone {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: larger;
+    padding-right: 2%;
+    padding-bottom: 1%;
 }
 section{
     background: white;
@@ -50,6 +56,8 @@ section{
     flex-wrap: wrap;
     justify-content: space-between;
     background-color: #dfdfdf;
+    word-wrap: break-word; 
+    
 }
 
 .box{
@@ -68,14 +76,15 @@ section{
     max-width: 70%;
 }
 ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
 }
 nav li{
-    display: inline-block;
+    display: inline-flex;
 }
 li .logo{
     max-height: fit-content;
@@ -83,12 +92,15 @@ li .logo{
 .väliotsikko {
     background-color: white;
     text-align: center;
-    margin-top: 5%;
+    justify-content: center;
+    margin: 6% auto;
     color: black;
     font-family: 'Roboto', sans-serif;
     letter-spacing: 1px;
+    line-height: 1.6; 
     font-size: larger;
-    margin-bottom: 0;
+    max-width: 900px;
+    padding: 20px;
 }
 .väliotsikko li {
     list-style:none;
@@ -168,27 +180,47 @@ h3{
     color: #333;
     font-size: large;
     height: 20em;
+    @media (min-width: 431px) {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
 }
 .kolmasosio h2 {
-position: relative;
-display: flex;
-letter-spacing: 1px;
-
-justify-content: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 1px;
+    font-size: 2rem; 
+    font-weight: 600; 
+    margin-bottom: 20px;
 }
+
 .kolmasosio ul {
     list-style: none;
+    display: flex;
+    flex-direction: column; /* Stack list items vertically */
     justify-content: center;
     align-items: center;
+    padding: 0;
+    margin: 0;
 }
+
 .kolmasosio li {
-    width: 70%;
-    display: flex;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 15px; /* Add spacing between items */
+    display: block; /* Block layout for better control */
+    text-align: center; /* Center-align text */
 }
 .kolmasosio p {
-    justify-self: center;
+    font-size: 1rem; 
+    line-height: 1.6; 
     padding: 2%;
-    
+    margin: 0 auto; 
+    width: 90%;
+    max-width: 800px; 
+    color: #333;
+    word-wrap: break-word; 
 }
 .tausta{
     background-image: url('workspace-1280538_1920.jpg');
