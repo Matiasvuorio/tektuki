@@ -144,10 +144,25 @@ li .logo{
 .väliotsikko li {
     list-style:none;
     align-items: center;
-    
+    flex-basis: 20%; /* Default for larger screens */
+    padding: 50px;
+
+    @media (max-width: 700px) {
+        flex-basis: 30%; /* 3 symbols per row on mobile */
+        padding: 5px; /* Reduce padding to prevent icons from becoming too large */
+    }
 }
 .väliotsikko ul {
     width: 100%;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around; /* Single row on larger screens */
+    flex-wrap: nowrap; /* No wrapping by default */
+    
+    @media (max-width: 700px) {
+        flex-wrap: wrap; /* Allow wrapping into two rows on mobile */
+        justify-content: center; /* Center items on mobile */
+    }
 }
 footer{
     background-color: #333;
@@ -195,17 +210,14 @@ h3{
     list-style: none;
     flex-basis: 20%;
 
-    @media (max-width: 800px) {
-        padding: 30px;
-    }
+
     @media (max-width: 700px) {
-        padding: 10px;
-        margin-right: 5px;
-        flex-basis: 30%;
+        padding: 2%;
+        margin-rigt: 5px;
+        flex-basis: 20%;
     }
     @media (max-width: 376px) {
         padding: 5px;
-        margin-right: 13px;
         flex-basis: 45;
     }
 }  
@@ -215,6 +227,13 @@ h3{
     padding: 40%;
     border-radius: 50%;
     border: 3px solid #3c749d;
+
+    @media (max-width: 730px) {
+        padding: 35%; /* Decrease size on smaller screens */
+    }
+    @media (max-width: 700px) {
+        padding: 25%; /* Decrease size on smaller screens */
+    }
 
     @media (max-width: 431px) {
         padding: 25%; /* Decrease size on smaller screens */
