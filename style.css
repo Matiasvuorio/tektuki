@@ -19,7 +19,7 @@ header {
 
 header .logo {
     padding-bottom: 60px;
-    width: 175px;
+    width: 15px;
     overflow-y: hidden;
     max-width: 100%;
 }
@@ -51,7 +51,6 @@ nav{
     white-space: nowrap;
     color: inherit;
     text-decoration: none;
-    padding-right: 3%;
 }
 .phone a {
     text-decoration: none;
@@ -118,11 +117,11 @@ nav{
     color:#3c749d;
 }
 .services h2 {
-    color: black;
+    color:#3c749d;
     margin-top: 0;
 }
 
-.box img {
+.service-box img {
     width: 100%;
     height: auto;
     flex: 1;
