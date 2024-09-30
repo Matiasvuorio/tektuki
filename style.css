@@ -42,7 +42,7 @@ nav{
     
 }
 .phone {
-    display: flex;
+    display: inline-block;
     align-items: center;
     justify-content: flex-end;
     font-size: larger;
@@ -151,11 +151,11 @@ li .logo{
     align-items: center;
     flex-basis: 20%; /* Default for larger screens */
     padding: 50px;
+    overflow-x: hidden;
     
     @media (max-width: 730px) {
         flex-basis: 33%;
         padding: 5px;
-        overflow-x: hidden;
     }
 }
 .väliotsikko ul {
@@ -166,8 +166,10 @@ li .logo{
     flex-wrap: nowrap; /* No wrapping by default */
     
     @media (max-width: 700px) {
-        flex-wrap: wrap; /* Allow wrapping into two rows on mobile */
-        justify-content: center; /* Center items on mobile */
+        flex-wrap: wrap; 
+        justify-content: center;
+        margin-top: 0;
+        margin-bottom: 0; 
     }
 }
 footer{
@@ -218,9 +220,10 @@ h3{
 
 
     @media (max-width: 700px) {
-        padding: 2%;
+        padding: 5%;
         margin-rigt: 5px;
         flex-basis: 20%;
+        padding-bottom: 0;
     }
     @media (max-width: 376px) {
         padding: 5px;
@@ -235,7 +238,7 @@ h3{
     border: 3px solid #3c749d;
 
     @media (max-width: 730px) {
-        padding: 35%; /* Decrease size on smaller screens */
+        padding: 30%; /* Decrease size on smaller screens */
     }
     @media (max-width: 700px) {
         padding: 25%; /* Decrease size on smaller screens */
