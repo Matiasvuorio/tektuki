@@ -88,9 +88,14 @@ nav{
     gap: 20px;
     margin-top: 2%;
     max-width: 1000px;
-    padding-left: 20%;
+    padding-left: 14%;
 }
-
+.container1 h2 {
+    height: 200px;
+}
+ .container2 h2 {
+    height: 200px ;
+}
 @media (max-width: 800px) {
     .container1, .container2 {
         grid-template-columns: repeat(2, 1fr); 
@@ -133,8 +138,9 @@ nav{
 .services h2 {
     color:#3c749d;
     margin-top: 0;
-    font-size: 18px;
-    height: 90px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    height: 100px;
 }
 
 .service-box img {
