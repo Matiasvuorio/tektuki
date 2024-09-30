@@ -105,7 +105,7 @@ nav{
     color:#3c749d;
 }
 .services h2 {
-    color: #3c749d;
+    color: black;
     margin-top: 0;
 }
 
@@ -150,9 +150,6 @@ li .logo{
     overflow-x: hidden;
     overflow-y: hidden;
     width: 100%;
-    @media (max-width: 431px) {
-        margin-right: 4%
-    }
 }
 footer{
     background-color: #333;
@@ -183,39 +180,51 @@ h3{
     padding-bottom: 0;
     margin-bottom: 0;
 }
-.symbolit li{
-    padding: 50px;
-    list-style: none;
-    @media (max-width: 800px) {
-        padding: 35px;
-    }
-    @media (max-width: 700px) {
-        padding: 10px;
-        margin-right: 10px;
-    }
-    @media (max-width: 376px) {
-        padding: 3px;
-        margin-right: 10px;
-    }
-} 
 
 .symbolit{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-size: larger;
-    margin-top: 0;
     max-width: 100%;
-    height: 200px;
+    height: auto;
     color: black;
     overflow-x:auto;
-} 
+    flex-wrap: wrap;
+}
+.symbolit li{
+    padding: 50px;
+    list-style: none;
+    flex-basis: 20%;
+
+    @media (max-width: 800px) {
+        padding: 30px;
+    }
+    @media (max-width: 700px) {
+        padding: 10px;
+        margin-right: 5px;
+        flex-basis: 30%;
+    }
+    @media (max-width: 376px) {
+        padding: 5px;
+        margin-right: 13px;
+        flex-basis: 45;
+    }
+}  
 
 .symbolit ion-icon{
     background: #bdcfd6;
     padding: 40%;
     border-radius: 50%;
     border: 3px solid #3c749d;
+
+    @media (max-width: 431px) {
+        padding: 25%; /* Decrease size on smaller screens */
+    }
+
+    @media (max-width: 376px) {
+        padding: 20%; /* Further decrease size for very small screens */
+    }
 }
 
 .kolmasosio{
