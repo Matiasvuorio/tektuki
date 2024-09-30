@@ -1,11 +1,12 @@
 body{
     background: white;
-    color: white;
     font-family: 'Poppins', sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     max-width: 100%;
+    line-height: 1.6;
 }
 header {
     background-color: #333;
@@ -23,6 +24,7 @@ header .logo {
     overflow-y: hidden;
     max-width: 100%;
 }
+
 header ion-icon{
     display: inline-block;
     vertical-align: middle;
@@ -49,10 +51,11 @@ nav{
     font-size: larger;
     padding-right: 2%;
     white-space: nowrap;
-    color: inherit;
+    color: white;
     text-decoration: none;
     padding-right: 3%;
 }
+
 .phone a {
     text-decoration: none;
     color: inherit;
@@ -81,21 +84,16 @@ nav{
     gap: 20px;
     justify-content: center;
     max-width: 1000px;
+    margin-bottom: 1%;
 }
 .container2{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-top: 2%;
+    justify-content: center;
     max-width: 1000px;
-    padding-left: 14%;
 }
-.container1 h2 {
-    height: 200px;
-}
- .container2 h2 {
-    height: 200px ;
-}
+
 @media (max-width: 800px) {
     .container1, .container2 {
         grid-template-columns: repeat(2, 1fr); 
@@ -110,6 +108,7 @@ nav{
 
 @media (max-width: 500px) {
     .container1, .container2 {
+        display: grid;
         grid-template-columns: 1fr; /* Change to 1 column on very small screens */
     }
 }
@@ -121,6 +120,7 @@ nav{
     justify-content: space-between;
     padding: 20px;
     flex: 1;
+    height: 400px;
     max-height: 650px;
     border-radius: 10px;
     border-color: #3c749d;
@@ -139,8 +139,18 @@ nav{
     color:#3c749d;
     margin-top: 0;
     letter-spacing: 1px;
-    font-size: 20px;
+    font-size: 30px;
+    height: 40px;
+}
+.services h3 {
+    color:#3c749d;
+    margin-top: 5px;
+    padding-top: 0;
+    letter-spacing: 1px;
+    font-size: 19px;
     height: 100px;
+    font-weight: 700;
+    background: white;
 }
 
 .service-box img {
@@ -286,7 +296,7 @@ h3{
     background: white;
     color: #333;
     font-size: large;
-    min-height: 25em;
+    min-height: 39em;
     @media (min-width: 431px) {
         margin-left: 15%;
         margin-right: 15%;
@@ -329,6 +339,7 @@ h3{
     color: #333;
     word-wrap: break-word; 
 }
+
 .tausta{
     background-image: url('tausta2.png');
     background-size: cover;
@@ -387,7 +398,25 @@ h3 {
     padding-bottom: 3%;
     background-color: #bdcfd6;
 }
+/*.button {
+    background-color: #3C749D;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+.button:hover {
+    background-color: #2a5276;
+}
 
+.button {
+    display: inline-block;
+    position: relative;
+}
+     
 @keyframes slideIn {
     from {
       transform: translateX(100%);
@@ -398,4 +427,7 @@ h3 {
       opacity: 1;
     }
   }
-/*animation: slideIn 1s ease-out forwards;
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
