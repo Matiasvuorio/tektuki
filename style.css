@@ -25,7 +25,9 @@ header .logo {
 }
 header ion-icon{
     display: inline-block;
+    vertical-align: middle;
     margin-right: 2%;
+    font-size: 20px;
 }
 header a{
     height: 0px;
@@ -45,6 +47,9 @@ nav{
     justify-content: flex-end;
     font-size: larger;
     padding-right: 2%;
+    white-space: nowrap;
+    color: inherit;
+    text-decoration: none;
 }
 .services {
     background-color: #bdcfd6;
