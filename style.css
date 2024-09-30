@@ -67,15 +67,20 @@ nav{
     align-items: center;
     margin-top: 0;
 }
-    
+
+.services p {
+    max-width: 900px;
+    justify-content:center;
+    text-align: center;
+    padding-bottom: 1%;
+    color: #3c749d;
+}   
 .container1 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
     justify-content: center;
     max-width: 1000px;
-    align-items: center;
-
 }
 .container2{
     display: grid;
@@ -85,6 +90,7 @@ nav{
     max-width: 1000px;
     padding-left: 20%;
 }
+
 @media (max-width: 800px) {
     .container1, .container2 {
         grid-template-columns: repeat(2, 1fr); 
@@ -105,14 +111,21 @@ nav{
 
 .service-box{
     background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 20px;
+    flex: 1;
+    max-height: 650px;
     border-radius: 10px;
     border-color: #3c749d;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center
+    text-align: center;
     }
 
 .service-box p {
+    margin: 0;
+    padding: 10px 0;
     margin-bottom: 20px;
     font-size: 16px;
     color:#3c749d;
@@ -120,12 +133,14 @@ nav{
 .services h2 {
     color:#3c749d;
     margin-top: 0;
+    font-size: 18px;
+    height: 90px;
 }
 
 .service-box img {
     width: 100%;
-    height: auto;
-    flex: 1;
+    object-fit: cover;
+    margin-top: auto;
     border-radius: 5px;
 }
 ul {
@@ -265,7 +280,7 @@ h3{
     background: white;
     color: #333;
     font-size: large;
-    height: 20em;
+    min-height: 25em;
     @media (min-width: 431px) {
         margin-left: 15%;
         margin-right: 15%;
@@ -299,12 +314,12 @@ h3{
     text-align: center; /* Center-align text */
 }
 .kolmasosio p {
-    font-size: 1rem; 
+    font-size: 1rem;
     line-height: 1.6; 
     padding: 2%;
     margin: 0 auto; 
     width: 90%;
-    max-width: 800px; 
+    max-width: 900px; 
     color: #333;
     word-wrap: break-word; 
 }
