@@ -120,7 +120,7 @@ nav{
     justify-content: space-between;
     padding: 20px;
     flex: 1;
-    height: 450px;
+    height: 400px;
     max-height: 650px;
     border-radius: 10px;
     border-color: #3c749d;
@@ -293,33 +293,47 @@ h3{
 }
 
 .kolmasosio{
-    background: white;
+    background-color: #f9f9f9;
     color: #333;
-    font-size: large;
-    min-height: 39em;
-    @media (min-width: 431px) {
-        margin-left: 15%;
-        margin-right: 15%;
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 2%;
+    justify-content: center;
+    margin: 0px auto;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    @media (max-width: 431px) {
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
 .kolmasosio h2 {
-    position: relative;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     letter-spacing: 1px;
+    margin-top: 0;
     font-size: 2rem; 
     font-weight: 600; 
     margin-bottom: 20px;
+    margin-top: 0;
 }
-
-.kolmasosio ul {
+.kolmasosio .yläosa, .kolmasosio .alempi {
+    margin-bottom: 20px; /* Add spacing between sections */
+}
+.kolmasosio .yläosa ul {
     list-style: none;
     display: flex;
     flex-direction: column; /* Stack list items vertically */
-    justify-content: center;
-    align-items: center;
     padding: 0;
     margin: 0;
+}
+.kolmasosio ol {
+    padding-left: 20px;
+    margin: 10px 0;
+    @media (max-width: 431px) {
+        padding-left: 2%;
+        margin-right: 5%;
+}
 }
 
 .kolmasosio li {
@@ -330,15 +344,11 @@ h3{
     text-align: center; /* Center-align text */
 }
 .kolmasosio p {
-    font-size: 1rem;
-    line-height: 1.6; 
-    padding: 2%;
-    margin: 0 auto; 
-    width: 90%;
-    max-width: 900px; 
-    color: #333;
-    word-wrap: break-word; 
+    padding: 0;
+    margin: 10, 0;
+    text-align: justify;
 }
+
 
 .tausta{
     background-image: url('tausta2.png');
