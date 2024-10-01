@@ -157,8 +157,9 @@ nav{
     width: 100%;
     object-fit: cover;
     margin-top: auto;
-    max-height: 200px;
+    height: 230px;
     border-radius: 5px;
+    overflow-y: hidden;
 }
 ul {
     display: flex;
@@ -303,7 +304,6 @@ h3{
     max-width: 800px;
     margin: 20px auto;
     max-width: 1000px;
-    width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding-bottom: 1%;
@@ -355,6 +355,10 @@ h3{
     margin: 3%;
     text-align: justify;
     max-width: 1300px;
+}
+.kolmasosio h4 {
+    text-align: center;
+    margin: 1%;
 }
 
 .tausta{
