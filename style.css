@@ -98,7 +98,7 @@ nav{
     .container1, .container2 {
         grid-template-columns: repeat(2, 1fr); 
         padding-left: 0;
-        gap: 10px;
+        gap: 15px;
     }
 
     .service-box {
@@ -157,6 +157,7 @@ nav{
     width: 100%;
     object-fit: cover;
     margin-top: auto;
+    max-height: 200px;
     border-radius: 5px;
 }
 ul {
@@ -364,7 +365,7 @@ h3{
         background-image: url(tausta\ mobiilille.png);
     }
     @media (max-height: 680px) {
-        height: 500px;
+        height: 350px;
     }
     
 }
