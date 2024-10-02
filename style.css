@@ -185,7 +185,7 @@ li .logo{
 .väliotsikko {
     text-align: center;
     justify-content: center;
-    margin: auto;
+    margin: 2% auto;
     color: black;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
@@ -194,6 +194,10 @@ li .logo{
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    @media (max-width: 1000px) {
+        margin: 0 auto; 
+    }
 }
 .väliotsikko li {
     list-style:none;
@@ -266,6 +270,7 @@ h3{
     padding: 50px;
     list-style: none;
     flex-basis: 20%;
+    overflow-y: hidden;
 
 
     @media (max-width: 700px) {
