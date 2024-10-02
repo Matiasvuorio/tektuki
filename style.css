@@ -263,6 +263,7 @@ h3{
     color: black;
     overflow-x:auto;
     flex-wrap: wrap;
+    background-color: white;
 }
 .symbolit li{
     padding: 50px;
