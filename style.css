@@ -182,7 +182,6 @@ li .logo{
     text-align: center;
     justify-content: center;
     margin: 20px auto;
-    margin-inline: 20px;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
     background-color: #f9f9f9;
@@ -190,7 +189,10 @@ li .logo{
     max-width: 900px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
+    @media (max-width: 431px) {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
     /*@media (max-width: 1000px) {
         margin: 0 auto; 
     }*/
@@ -432,6 +434,8 @@ h3 {
     align-items: center;
     padding-bottom: 3%;
     background-color: #bdcfd6;
+}
+.footer ion-icon {
 }
 /*.button {
     background-color: #3C749D;
