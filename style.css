@@ -65,6 +65,11 @@ nav{
 .phone-link:hover {
     color:#3c749d; 
 }
+.email-link ion-icon {
+}
+.email-link:hover {
+    color:#3c749d; 
+}
 .services {
     background-color: #bdcfd6;
     padding: 40px 20px;
@@ -431,8 +436,24 @@ h3 {
     align-items: center;
     padding-bottom: 3%;
 }
-.footer ion-icon {
+footer p {
+    justify-content:center ;
+    align-items: center;
 }
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+footer ion-icon {
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    font-size: 20px;
+
+}
+
 /*.button {
     background-color: #3C749D;
     color: white;
