@@ -423,13 +423,7 @@ img{
     width: 100%;
     flex: 1;
 }
-.väliotsikko h2 {
-    background-color: white;
-}
-.väliotsikko h3{
-    background-color: white;
-    line-height: 1.6;
-}
+
 
 h3 {
     color: black;
@@ -437,7 +431,7 @@ h3 {
     justify-content: center;
     align-items: center;
     padding-bottom: 3%;
-    background-color: #bdcfd6;
+    background-color: white;
 }
 .footer ion-icon {
 }
