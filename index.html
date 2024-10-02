@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <title>Document</title>
+    <title>Jyväskylän Digituki</title>
 </head>
 <body>
     <header> 
@@ -21,7 +21,9 @@
                 </a>
             </li> 
             <li class="phone">
-                <ion-icon name="call-sharp"></ion-icon><a href="tel:123123123">+123 456 7890</a>
+                <a href="tel:123123123" class="phone-link">
+                    <ion-icon name="call-sharp"></ion-icon> +123 456 7890
+                </a>
             </li>
         </ul>
     </nav>
@@ -37,50 +39,56 @@
 
     <div class="symbolit">
         <ul>
-    <li><ion-icon size="large" name="phone-portrait-outline"></ion-icon></li>
-    <li><ion-icon size="large" name="tablet-portrait-outline"></ion-icon></li>
-    <li><ion-icon size="large" name="laptop-outline"></ion-icon></li>
-    <li><ion-icon size="large" name="tv-outline"></ion-icon></li>
-    <li><ion-icon size="large" name="wifi-outline"></ion-icon></li>
-    </ul>
+            <li onclick="scrollToServices('service1')"><ion-icon size="large" name="phone-portrait-outline"></ion-icon></li>
+            <li onclick="scrollToServices('service2')"><ion-icon size="large" name="tablet-portrait-outline"></ion-icon></li>
+            <li onclick="scrollToServices('service3')"><ion-icon size="large" name="laptop-outline"></ion-icon></li>
+            <li onclick="scrollToServices('service4')"><ion-icon size="large" name="tv-outline"></ion-icon></li>
+            <li onclick="scrollToServices('service5')"><ion-icon size="large" name="wifi-outline"></ion-icon></li>
+        </ul>
     </div>
+    
 </div>
-<section class="services">
+<section id="services" class="services">
     <h2>Esim. hinnasto:</h2>
     <p>Hinnat ovat arvioita ja perustuvat 35 € tuntimaksuun, joka on minimiveloitus ja veloitetaan jokaisesta käynnistä. Mikäli asut yli 8km päässä Jyväskylän keskustasta, peritään kotikäynnistä normaalin hinnan lisäksi myös polttoainemaksu. (Kaikki hinnat sisältävät alv 25,5%)</p>
     <div class="container1">
-        <div class="service-box">
-            <h3>Tabletin konfigurointi, sovellusten asennus ja käyttöapu</h3>
-            <p>Hinta: n. 35 € (sisältää max. 1 tuntia työtä)</p>
-            <img src="hands-820272_1920.jpg" alt="kuva1: tabletti">
-        </div>
-        <div class="service-box">
-            <h3>Television käyttöönotto, sovellusten asennus, kanavahaku ja käyttöapu</h3>
-            <p>Hinta: n. 35-45 € (sisältää max. 1,5 tuntia työtä).</p>
-            <img src="tablet-7025900_1920.jpg" alt="kuva2: älytelevisio">
-        </div>
-        <div class="service-box">
-            <h3>Tietokoneen asennus, käyttöönotto ja käyttöapu</h3>
-            <p>Hinta: n. 45-55 € (sisältää max. 2 tuntia työtä)</p>
-            <img src="work-on-the-laptop-1936827_1920.jpg" alt="kuva3: kannetta">
-        </div>
-        <div class="service-box">
-            <h3>Reitittimen/modeemin konfigurointi (esim. Wi-Fi-salasanan vaihto)</h3>
-            <p>Hinta: n. 35 € (sisältää max. 1 tunti työtä)</p>
-            <img src="modem-5436144_1920.jpg" alt="kuva4: modeemi">
-        </div>
-        <div class="service-box">
+        <div id="service1" class="service-box">
             <h3>Puhelimen käyttöönotto, tiedonsiirto vanhasta puhelimesta ja käyttöapu.</h3>
             <p>Hinta: n. 45 € (sisältää max. 1,5 tuntia työtä)</p>
             <img src="iphones-7479304_1920.jpg" alt="kuva5: älypuhelimet">
         </div>
-        <div class="service-box">
+        <div id="service2" class="service-box">
+            <h3>Tabletin konfigurointi, sovellusten asennus ja käyttöapu</h3>
+            <p>Hinta: n. 35 € (sisältää max. 1 tuntia työtä)</p>
+            <img src="hands-820272_1920.jpg" alt="kuva1: tabletti">
+        </div>
+        <div id="service3" class="service-box">
+            <h3>Tietokoneen asennus, käyttöönotto ja käyttöapu</h3>
+            <p>Hinta: n. 45-55 € (sisältää max. 2 tuntia työtä)</p>
+            <img src="work-on-the-laptop-1936827_1920.jpg" alt="kuva3: kannetta">
+        </div>
+        <div id="service4" class="service-box">
+            <h3>Television käyttöönotto, sovellusten asennus, kanavahaku ja käyttöapu</h3>
+            <p>Hinta: n. 35-45 € (sisältää max. 1,5 tuntia työtä).</p>
+            <img src="tablet-7025900_1920.jpg" alt="kuva2: älytelevisio">
+        </div>
+        <div id="service5" class="service-box">
+            <h3>Reitittimen/modeemin konfigurointi (esim. Wi-Fi-salasanan vaihto)</h3>
+            <p>Hinta: n. 35 € (sisältää max. 1 tunti työtä)</p>
+            <img src="modem-5436144_1920.jpg" alt="kuva4: modeemi">
+        </div>
+        <div id="service6" class="service-box">
             <h3>Muun laitteen asennus, konfigurointi tai käyttöapu</h3>
             <p>Hinta: n. 35 € (max. 1 tunti lisätunnit tapauskohtaisesti)</p>
             <img src="clock-756487_1920.jpg" alt="kuva 6: älykello">
         </div>
         </div>
     </div>
+    <script>
+        function scrollToServices(serviceID) {
+            document.getElementById(serviceID).scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>    
 </section>
 <div class="kolmasosio">
     <h2>Tietoa minusta</h2>
@@ -95,13 +103,7 @@
     </ol>
 
     <p>Olen 24-vuotias, lähes valmistunut Jyväskylän yliopiston tietojärjestelmätieteiden opiskelija. Työkokemukseni ja koulutukseni myötä minulla on vahva pohja monenlaisten teknisten ongelmien ratkaisemiseen. Lisäksi pystyn tarjoamaan henkilökohtaisia neuvoja laitteidesi turvalliseen ja huolettomaan käyttöön, jotta voit nauttia teknologiasta ilman suurempaa stressiä. </p>
-
-    <div class="yhteystiedot">
     <p>Asiakkaideni tyytyväisyys on aina  etusijalla, ja siksi olen sitoutunut tarjoamaan parasta mahdollista tukea ja palvelua. Tiedän, kuinka turhauttavaa voi olla, kun laitteet eivät toimi odotetusti. Älä jää yksin teknologisten haasteidesi kanssa. <strong>Ota rohkeasti yhteyttä</strong> puhelimitse tai sähköpostilla (myös WhatsAppin kautta), niin selvitetään yhdessä, kuinka voin auttaa juuri sinua.</p>
-    <h4>Matias Vuorio</h4>
-    <h4>puh. 0441234567</h4>
-    <h4>säpö</h4>
-</div>
 </div>
     <footer> 
         <a href="index.html"> 
@@ -111,6 +113,8 @@
         <p>puh. puhelinnumero</p>
         <p>sähköpostiosoite</p>
         <p>Y-tunnus: 1234567</p>
-     </footer>
+        <a href="https://www.linkedin.com/" target="_blank" class="icon-link">
+            <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
 </body>
 </html>
