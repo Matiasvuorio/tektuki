@@ -11,16 +11,20 @@ body{
 header {
     background-color: #333;
     margin-top: 0;
-    height: 65px;
+    height: 60px;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
     max-width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 header .logo {
     padding-bottom: 60px;
-    width: 195px;
+    width: 175px;
     overflow-y: hidden;
     max-width: 100%;
 }
@@ -473,7 +477,7 @@ footer ion-icon {
     display: inline-block;
     position: relative;
 }
-     
+ */    
 @keyframes slideIn {
     from {
       transform: translateX(100%);
