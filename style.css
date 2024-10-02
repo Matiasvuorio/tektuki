@@ -389,11 +389,11 @@ h3{
     background-repeat: no-repeat;
     min-height: 70vh;
     position: relative;
-    @media (max-width: 435px) {
+    @media (max-width: 821px) {
         background-size: 180%;
         min-height: 45vh;
         padding: 20px;
-        background-image: url(tausta\ mobiilille.png);
+        background-image: url(tausta\ mobiilille1.jpg);
     }
     @media (max-height: 680px) {
         height: 350px;
@@ -403,20 +403,21 @@ h3{
 
 .tausta h1{
     color: white;
-    position: absolute;
     top: 45%;
     left: 13%;
     transform: translate(-50%, -50%);
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
-    font-size: clamp(10px, 5vw, 38px);
+    font-size: clamp(22px, 5vw, 38px);
     max-height: 70%;
     border-style:double;
     border-color: black;
+    text-shadow: 3px 3px black;
 
     @media (max-width: 431px) {
-        margin-left: 0;
-        letter-spacing: 7px;
+        padding: 50px;
+        left: 5%;
+        letter-spacing: 5px;
         max-width: 55px;
     }
     @media (min-width: 1400px) {
