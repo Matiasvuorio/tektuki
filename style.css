@@ -1,6 +1,5 @@
 
 body{
-    background: #f9f9f9;
     font-family: 'Poppins', sans-serif;
     color: #333;
     margin: 0;
@@ -8,9 +7,6 @@ body{
     overflow-x: hidden;
     max-width: 100%;
     line-height: 1.6;
-     @media (max-width: 1000px) {
-        background-color: white;
-     }
 }
 header {
     background-color: #333;
