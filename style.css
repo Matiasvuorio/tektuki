@@ -183,10 +183,9 @@ li .logo{
     max-height: fit-content;
 }
 .väliotsikko {
-    background-color: white;
     text-align: center;
     justify-content: center;
-    margin: 6% auto;
+    margin: auto;
     color: black;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
