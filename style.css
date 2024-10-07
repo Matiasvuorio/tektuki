@@ -400,7 +400,7 @@ h3{
         background-image: url(tausta\ mobiilille1.jpg);
     }
     @media (max-height: 680px) {
-        height: 350px;
+        min-height: 500px;
     }
     
 }
