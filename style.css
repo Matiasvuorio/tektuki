@@ -190,7 +190,8 @@ li .logo{
 .väliotsikko {
     text-align: center;
     justify-content: center;
-    margin: 20px auto;
+    margin: 50px auto;
+    line-height: 1.6;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
     background-color: #f9f9f9;
@@ -205,6 +206,9 @@ li .logo{
     /*@media (max-width: 1000px) {
         margin: 0 auto; 
     }*/
+}
+.väliotsikko h2, h3 {
+    
 }
 .väliotsikko li {
     list-style:none;
