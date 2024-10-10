@@ -22,7 +22,7 @@ h1{
     padding-left: 5%;
     position: absolute;
     margin: 20px;
-    width: 150px;
+    width: 225px;
     font-size: clamp(16px, 5vw, 64px);
     font-family: "Poppins" "sans-serif";
 }
@@ -113,6 +113,53 @@ nav li{
 .phone-link:hover,
 .email-link:hover {
     color: #3c749d;
+}
+
+.tausta{
+    background-image: url('taustavalmis1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    position: relative;
+    
+    @media (max-width: 821px) {
+        background-size: 180%;
+        min-height: 45vh;
+        padding: 20px;
+        background-image: url(tausta\ mobiilille1.jpg);
+    }
+    @media (max-height: 680px) {
+        min-height: 500px;
+    }
+    
+}
+
+.tausta h1{
+    color: white;
+    top: 45%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    font-size: clamp(22px, 5vw, 38px);
+    max-height: 70%;
+    border-style:double;
+    border-color: black;
+    border-radius: 8px; /* Rounded corners */
+    text-shadow: 3px 3px black;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
+    letter-spacing: 0.05em; /* Add space between letters */
+
+    @media (max-width: 431px) {
+        padding: 50px;
+        left: 5%;
+        letter-spacing: 5px;
+        max-width: 55px;
+    }
+    @media (min-width: 1400px) {
+        font-size: clamp(10px, 6vw, 38px);
+    }
 }
 .väliotsikko {
     text-align: center;
@@ -376,49 +423,6 @@ nav li{
 }
 .icon-link:hover {
     color:#3c749d;
-}
-
-.tausta{
-    background-image: url('taustavalmis1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 70vh;
-    position: relative;
-    @media (max-width: 821px) {
-        background-size: 180%;
-        min-height: 45vh;
-        padding: 20px;
-        background-image: url(tausta\ mobiilille1.jpg);
-    }
-    @media (max-height: 680px) {
-        min-height: 500px;
-    }
-    
-}
-
-.tausta h1{
-    color: white;
-    top: 45%;
-    left: 13%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    font-size: clamp(22px, 5vw, 38px);
-    max-height: 70%;
-    border-style:double;
-    border-color: black;
-    text-shadow: 3px 3px black;
-
-    @media (max-width: 431px) {
-        padding: 50px;
-        left: 5%;
-        letter-spacing: 5px;
-        max-width: 55px;
-    }
-    @media (min-width: 1400px) {
-        font-size: clamp(10px, 6vw, 38px);
-    }
 }
 
 footer{
