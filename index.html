@@ -86,8 +86,16 @@
         </div>
     </div>
     <script>
-        function scrollToServices(serviceID) {
-            document.getElementById(serviceID).scrollIntoView({ behavior: 'smooth' });
+        function scrollToServices(serviceId) {
+    const element = document.getElementById(serviceId);
+    const offset = -120; 
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition + offset;
+
+    window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+    });
         }
     </script>    
 </section>
