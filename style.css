@@ -219,12 +219,10 @@ ion-icon {
         padding-left: 0%;
     }
     @media (max-width: 526px) {
-        max-height: 410px;
-        padding-bottom: 15%;
+        height: 470px;
     }
     @media (max-width: 400px) {
-        max-height: 420px;
-        padding-bottom: 10%;
+        height: 420px;
     }
     }
 
@@ -300,6 +298,7 @@ ion-icon {
         margin-right: 2%;
         letter-spacing: 0,5px;
         line-height: normal;
+        box-shadow: none;
     }
     /*@media (max-width: 1000px) {
         margin: 0 auto; 
