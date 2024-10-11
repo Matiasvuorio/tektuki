@@ -97,11 +97,76 @@ nav li{
     font-size: 19px;
     display: inline-block;
 }
-.phone-link:hover,
-.email-link:hover {
-    color: #3c749d;
+.buttons {
+    display: flex; /* Use flex for alignment */
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    gap: 10px; /* Space between buttons */
+    
 }
 
+.button-container {
+    display: flex;
+    font-size: 13px;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-bottom: 2%;
+}
+.button-container a {
+    max-width: 370px;
+    @media (max-width: 481px) {
+        max-width: 250px;
+    }
+}
+.phone-link2, .email-link2, .whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    background-color:#bdcfd6; 
+    color:black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px; /* Space between buttons */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+}
+
+ion-icon {
+    margin-right: 8px; /* Space between icon and text */
+    font-size: 20px; /* Icon size */
+}
+.phone-link2:hover,
+.phone-link:hover,
+.email-link2:hover,
+.email-link:hover,
+.whatsapp-button:hover {
+    color: #3c749d;
+}
+.contact-button {
+    background-color: #bdcfd6; 
+    color: white;
+    padding: 1em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    @media (max-width: 821px) {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex: 1 1 48%; /* Grow, shrink, and take up 48% of the container */
+        box-sizing: border-box; /* Ensure padding is included in width */
+    }
+}
+.contact-button:hover {
+    background-color: #285577; /* Darker shade for hover effect */
+}
+@media (max-width: 821px) {
+    .contact-button,
+    .cta-button {
+        padding: 0.5em 0;
+    }
+}
 .hero {
     background-image: url('taustavalmis1.jpg');
     background-size: cover;
@@ -129,7 +194,7 @@ nav li{
     }
     @media (max-width: 481px) {
         max-height: 410px;
-        padding-bottom: 15%;
+        padding-bottom: 20%;
     }
     }
 
@@ -176,15 +241,18 @@ nav li{
 .cta-button {
     background-color: #bdcfd6;
     color: white;
-    padding: 1em 2em;
+    padding: 1em 1em;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    
     @media (max-width: 821px) {
         align-items: center;
         display: flex;
         justify-content: center;
+        flex: 1 1 48%; /* Grow, shrink, and take up 48% of the container */
+        box-sizing: border-box; /* Ensure padding is included in width */
     }
 }
 
@@ -197,7 +265,6 @@ nav li{
     justify-content: center;
     margin: 50px auto;
     line-height: 1.6;
-    font-weight: bold;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
     background-color: #f9f9f9;
@@ -206,12 +273,45 @@ nav li{
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     @media (max-width: 431px) {
-        margin-left: 5%;
-        margin-right: 5%;
+        margin-left: 0%;
+        margin-top: 1%;
+        max-width: 100%;
+        margin-right: 0%;
+        letter-spacing: 0,5px;
+        line-height: normal;
     }
     /*@media (max-width: 1000px) {
         margin: 0 auto; 
     }*/
+
+}
+.väliotsikko h2 {
+    font-size: 31px;
+    @media (max-width: 431px) {
+        margin-inline: 0;
+        font-size: 25px;
+        font-weight: 600;
+        max-width: 100%;
+        letter-spacing: 0,5px;
+        line-height: 1,2;
+        flex-wrap: wrap;
+        word-break: normal;
+    }
+}
+.väliotsikko h3 {
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 0,5px;
+    line-height: 1,2;
+    @media (max-width: 431px) {
+        font-size: 22px;
+        font-weight: 600;
+        max-width: 100%;
+        letter-spacing: 0,5px;
+        line-height: 1,2;
+        flex-wrap: wrap;
+        word-break: normal;
+    }
 }
 .väliotsikko li {
     list-style:none;
@@ -230,7 +330,7 @@ nav li{
     padding: 0;
     margin: 0;
     justify-content: space-around; /* Single row on larger screens */
-    flex-wrap: nowrap; /* No wrapping by default */
+    flex-wrap: nowrap;
     
     @media (max-width: 700px) {
         flex-wrap: wrap; 
