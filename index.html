@@ -35,7 +35,7 @@
 <p>Auttamassa teknologiassa – yksinkertaista ja tehokasta apua juuri sinulle.</p>
 <div class="buttons">
 <a href="#services" class="cta-button" onclick="scrollToServices('services')">Tutustu palveluihin</a>
-<a href="#contact" class="contact-button" onclick="scrollToSection('contact')">Ota yhteyttä</a>
+<a href="#contact" class="contact-button" onclick="scrollToBottom('contact')">Ota yhteyttä</a>
 </div>
 </div>
 </section>
@@ -94,7 +94,15 @@
             <img src="vr.jpg" alt="kuva 6: vr-lasit">
         </div>
         </div>
-
+<script>
+    function scrollToBottom() {
+    event.preventDefault();
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"
+    });
+}
+    </script>
     <script>
     function scrollToServices(serviceId) {
     event.preventDefault();
