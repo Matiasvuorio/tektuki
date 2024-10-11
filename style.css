@@ -98,9 +98,9 @@ nav li{
     display: inline-block;
 }
 .buttons {
-    display: flex; /* Use flex for alignment */
-    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
-    gap: 10px; /* Space between buttons */
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
     
 }
 
@@ -150,7 +150,7 @@ ion-icon {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    @media (max-width: 821px) {
+    @media (max-width: 800px) {
         align-items: center;
         display: flex;
         justify-content: center;
@@ -159,7 +159,7 @@ ion-icon {
     }
 }
 .contact-button:hover {
-    background-color: #285577; /* Darker shade for hover effect */
+    background-color: #285577;
 }
 @media (max-width: 821px) {
     .contact-button,
@@ -172,7 +172,7 @@ ion-icon {
         rgba(0, 0, 0, 0.1),  
         rgba(255, 255, 255, 0.1)  
     ),
-    url('taustavalmis1.jpg');  /* Your background image */
+    url('taustavalmis1.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -185,18 +185,22 @@ ion-icon {
     position: relative;
     text-align: left; 
 
-    @media (max-width: 821px) {
+    @media (max-width: 800px) {
         align-items: end;
         justify-content: center;
         padding-bottom: 10px;
         min-height: 50vh; 
         background-image: url(tausta\ mobiilille2.jpg);
-        background-size: 90%;
+        background-size: 100%;
         background-color:#3c749d;
         background-position: top;
         padding-left: 0%;
     }
-    @media (max-width: 481px) {
+    @media (max-width: 526px) {
+        max-height: 410px;
+        padding-bottom: 15%;
+    }
+    @media (max-width: 429px) {
         max-height: 410px;
         padding-bottom: 20%;
     }
@@ -207,7 +211,7 @@ ion-icon {
 .tausta {
     position: relative;
     z-index: 1;
-    @media (max-width: 821px) {
+    @media (max-width: 800px) {
         height: 220px;
         padding-bottom: 30px;
         padding: 0 10px;
@@ -221,7 +225,7 @@ ion-icon {
     padding-bottom: 0.5em;
     line-height: 1.2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    @media (max-width: 821px) {
+    @media (max-width: 800px) {
         max-width: 100%;
         font-size: 2rem;
         padding-bottom: 0.2rem;
@@ -235,10 +239,11 @@ ion-icon {
     margin-bottom: 1.5em;
     color: #f0f0f0;
     max-width: 40%;
-    @media (max-width: 821px) {
+    @media (max-width: 800px) {
         font-size: 1rem;
         max-width: 100%;
         text-align: center;
+        margin-bottom: 10px;
     }
 }
 .cta-button {
@@ -250,7 +255,7 @@ ion-icon {
     font-weight: bold;
     transition: background-color 0.3s ease;
     
-    @media (max-width: 821px) {
+    @media (max-width: 800px) {
         align-items: center;
         display: flex;
         justify-content: center;
