@@ -168,15 +168,19 @@ ion-icon {
     }
 }
 .hero {
-    background-image: url('taustavalmis1.jpg');
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.1),  /* Subtle dark at the top */
+        rgba(255, 255, 255, 0.1)  /* Subtle light at the bottom */
+    ),
+    url('taustavalmis1.jpg');  /* Your background image */
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-left: 5%; 
-    height: 80vh; 
+    min-height: 60vh; 
     color: white;
     position: relative;
     text-align: left; 
@@ -185,7 +189,7 @@ ion-icon {
         align-items: end;
         justify-content: center;
         padding-bottom: 10px;
-        max-height: 560px;
+        min-height: 50vh; 
         background-image: url(tausta\ mobiilille2.jpg);
         background-size: 90%;
         background-color:#3c749d;
@@ -208,7 +212,6 @@ ion-icon {
         padding-bottom: 30px;
         padding: 0 10px;
     }
-
 }
 .tausta h1 {
     font-size: 3rem;
