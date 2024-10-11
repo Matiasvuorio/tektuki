@@ -300,6 +300,7 @@ ion-icon {
         line-height: normal;
         box-shadow: none;
         background-color: white;
+        flex-wrap: wrap;
     }
     /*@media (max-width: 1000px) {
         margin: 0 auto; 
@@ -320,8 +321,6 @@ ion-icon {
         max-width: 100%;
         letter-spacing: 0,5px;
         line-height: 1,2;
-        flex-wrap: wrap;
-        word-break: normal;
     }
 }
 .väliotsikko h3 {
@@ -336,8 +335,6 @@ ion-icon {
         max-width: 100%;
         letter-spacing: 0,5px;
         line-height: 1,2;
-        flex-wrap: wrap;
-        word-break: normal;
     }
 }
 .väliotsikko li {
