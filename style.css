@@ -113,9 +113,9 @@ nav li{
     margin-bottom: 2%;
 }
 .button-container a {
-    max-width: 370px;
+    max-width: 470px;
     @media (max-width: 481px) {
-        max-width: 250px;
+        width: 390px;
     }
 }
 .phone-link2, .email-link2, .whatsapp-button {
@@ -142,6 +142,27 @@ ion-icon {
 .whatsapp-button:hover {
     color: #3c749d;
 }
+.cta-button {
+    background-color: #bdcfd6;
+    color: white;
+    padding: 1em 1em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    
+    @media (max-width: 700px) {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex: 1 1 48%;
+        box-sizing: border-box;
+    }
+}
+
+.cta-button:hover {
+    background-color: #285577;
+}
 .contact-button {
     background-color: #bdcfd6; 
     color: white;
@@ -150,7 +171,7 @@ ion-icon {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    @media (max-width: 800px) {
+    @media (max-width: 700px) {
         align-items: center;
         display: flex;
         justify-content: center;
@@ -161,6 +182,7 @@ ion-icon {
 .contact-button:hover {
     background-color: #285577;
 }
+
 @media (max-width: 821px) {
     .contact-button,
     .cta-button {
@@ -172,7 +194,7 @@ ion-icon {
         rgba(0, 0, 0, 0.1),  
         rgba(255, 255, 255, 0.1)  
     ),
-    url('taustavalmis1.jpg'); 
+    url('tausta.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -185,12 +207,12 @@ ion-icon {
     position: relative;
     text-align: left; 
 
-    @media (max-width: 800px) {
+    @media (max-width: 700px) {
         align-items: end;
         justify-content: center;
         padding-bottom: 10px;
         min-height: 50vh; 
-        background-image: url(tausta\ mobiilille2.jpg);
+        background-image: url(tausta_mobiilille.jpg);
         background-size: 100%;
         background-color:#3c749d;
         background-position: top;
@@ -200,9 +222,9 @@ ion-icon {
         max-height: 410px;
         padding-bottom: 15%;
     }
-    @media (max-width: 429px) {
-        max-height: 410px;
-        padding-bottom: 20%;
+    @media (max-width: 400px) {
+        max-height: 420px;
+        padding-bottom: 10%;
     }
     }
 
@@ -211,11 +233,12 @@ ion-icon {
 .tausta {
     position: relative;
     z-index: 1;
-    @media (max-width: 800px) {
-        height: 220px;
+    @media (max-width: 700px) {
+        min-height: 220px;
         padding-bottom: 30px;
         padding: 0 10px;
     }
+
 }
 .tausta h1 {
     font-size: 3rem;
@@ -225,11 +248,18 @@ ion-icon {
     padding-bottom: 0.5em;
     line-height: 1.2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    @media (max-width: 800px) {
+    @media (max-width: 700px) {
         max-width: 100%;
         font-size: 2rem;
         padding-bottom: 0.2rem;
         text-align: center;
+    }
+    @media (max-width: 400px) {
+        font-size: 24px;
+    }
+    @media (max-width: 376px) {
+        font-size: 24px;
+        margin-top: 62%;
     }
 
 
@@ -239,34 +269,17 @@ ion-icon {
     margin-bottom: 1.5em;
     color: #f0f0f0;
     max-width: 40%;
-    @media (max-width: 800px) {
+    @media (max-width: 700px) {
         font-size: 1rem;
         max-width: 100%;
         text-align: center;
         margin-bottom: 10px;
     }
-}
-.cta-button {
-    background-color: #bdcfd6;
-    color: white;
-    padding: 1em 1em;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    
-    @media (max-width: 800px) {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        flex: 1 1 48%; /* Grow, shrink, and take up 48% of the container */
-        box-sizing: border-box; /* Ensure padding is included in width */
+    @media (max-width: 400px) {
+        font-size: 17px;
     }
 }
 
-.cta-button:hover {
-    background-color: #285577;
-}
 
 .väliotsikko {
     text-align: center;
@@ -528,19 +541,19 @@ ion-icon {
     margin-top: 0;
 }
 .tietoaminusta .yläosa, .tietoaminusta .alempi {
-    margin-bottom: 20px; /* Add spacing between sections */
+    margin-bottom: 20px;
 }
 .tietoaminusta .yläosa ul {
     list-style: none;
     display: flex;
-    flex-direction: column; /* Stack list items vertically */
+    flex-direction: column;
     padding: 0;
     margin: 0;
 }
 .tietoaminusta ol {
     padding-left: 20px;
     margin: 3%;
-    align-items: center;
+    text-align: justify;
     max-width: 900px;
     @media (max-width: 700px) {
         margin: 5%;
@@ -553,14 +566,18 @@ ion-icon {
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-bottom: 15px; /* Add spacing between items */
-    display: block; /* Block layout for better control */
+    margin-bottom: 15px;
+    display: block;
     text-align: justify;
 }
 .tietoaminusta p {
     margin: 3%;
     text-align: justify;
     max-width: 1300px;
+
+    @media (max-width: 450px) {
+        text-align:start;
+}
 }
 
 .icon-link {
