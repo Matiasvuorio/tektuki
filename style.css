@@ -15,21 +15,8 @@ img{
 h1, h2, h3{
     font-weight: 700;
 }
-h1{
-    padding-bottom: 30%;
-    letter-spacing: 10px;
-    padding-top: 10%;
-    padding-left: 5%;
-    position: absolute;
-    margin: 20px;
-    width: 225px;
-    font-size: clamp(16px, 5vw, 64px);
-    font-family: "Poppins" "sans-serif";
-}
-
 
 h3 {
-    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,7 +94,7 @@ nav li{
 .phone a {
     text-decoration: none;
     color: inherit;
-    font-size: 20px;
+    font-size: 19px;
     display: inline-block;
 }
 .phone-link:hover,
@@ -115,64 +102,102 @@ nav li{
     color: #3c749d;
 }
 
-.tausta{
+.hero {
     background-image: url('taustavalmis1.jpg');
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
-    min-height: 70vh;
-    position: relative;
-    
-    @media (max-width: 821px) {
-        background-size: 180%;
-        min-height: 45vh;
-        padding: 20px;
-        background-image: url(tausta\ mobiilille1.jpg);
-    }
-    @media (max-height: 680px) {
-        min-height: 500px;
-    }
-    
-}
-
-.tausta h1{
+    background-position: center; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 5%; 
+    height: 80vh; 
     color: white;
-    top: 45%;
-    left: 13%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    font-size: clamp(22px, 5vw, 38px);
-    max-height: 70%;
-    border-style:double;
-    border-color: black;
-    border-radius: 8px; /* Rounded corners */
-    text-shadow: 3px 3px black;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); /* Add a soft shadow */
-    letter-spacing: 0.05em; /* Add space between letters */
+    position: relative;
+    text-align: left; 
 
-    @media (max-width: 701px) {
-        padding-right: 45px;
-        padding-left: 10px;
-        left: 22%;
-        max-width: 95px;
-        margin: 0;
+    @media (max-width: 821px) {
+        align-items: end;
+        justify-content: center;
+        padding-bottom: 10px;
+        max-height: 560px;
+        background-image: url(tausta\ mobiilille2.jpg);
+        background-size: 90%;
+        background-color:#3c749d;
+        background-position: top;
+        padding-left: 0%;
     }
-    @media (min-width: 701px) {
-        padding-right: 45px;
-        padding-left: 10px;
-        max-width: 95px;
-        margin: 0;
+    @media (max-width: 481px) {
+        max-height: 410px;
+        padding-bottom: 15%;
     }
-    @media (min-width: 1400px) {
-        font-size: clamp(10px, 6vw, 38px);
+    }
+
+
+
+.tausta {
+    position: relative;
+    z-index: 1;
+    @media (max-width: 821px) {
+        height: 220px;
+        padding-bottom: 30px;
+        padding: 0 10px;
+    }
+
+}
+.tausta h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    max-width: 50%;
+    padding-bottom: 0.5em;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    @media (max-width: 821px) {
+        max-width: 100%;
+        font-size: 2rem;
+        padding-bottom: 0.2rem;
+        text-align: center;
+    }
+
+
+}
+.tausta p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5em;
+    color: #f0f0f0;
+    max-width: 40%;
+    @media (max-width: 821px) {
+        font-size: 1rem;
+        max-width: 100%;
+        text-align: center;
     }
 }
+.cta-button {
+    background-color: #bdcfd6;
+    color: white;
+    padding: 1em 2em;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    @media (max-width: 821px) {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.cta-button:hover {
+    background-color: #285577;
+}
+
 .väliotsikko {
     text-align: center;
     justify-content: center;
     margin: 50px auto;
     line-height: 1.6;
+    font-weight: bold;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
     background-color: #f9f9f9;
