@@ -169,8 +169,8 @@ ion-icon {
 }
 .hero {
     background: linear-gradient(
-        rgba(0, 0, 0, 0.1),  /* Subtle dark at the top */
-        rgba(255, 255, 255, 0.1)  /* Subtle light at the bottom */
+        rgba(0, 0, 0, 0.1),  
+        rgba(255, 255, 255, 0.1)  
     ),
     url('taustavalmis1.jpg');  /* Your background image */
     background-size: cover;
@@ -289,7 +289,11 @@ ion-icon {
 
 }
 .väliotsikko h2 {
+    font-family: 'Poppins', sans-serif;
     font-size: 31px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: black;
     @media (max-width: 431px) {
         margin-inline: 0;
         font-size: 25px;
@@ -302,10 +306,11 @@ ion-icon {
     }
 }
 .väliotsikko h3 {
-    font-size: 25px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
     font-weight: 500;
-    letter-spacing: 0,5px;
-    line-height: 1,2;
+    line-height: 1,5;
+    color: #333;
     @media (max-width: 431px) {
         font-size: 22px;
         font-weight: 600;
