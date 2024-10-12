@@ -504,7 +504,6 @@ ion-icon {
     max-width: 900px;
     @media (max-width: 700px) {
         margin: 5%;
-        text-align: start;
         padding-left: 0px;
 }
 }
@@ -516,6 +515,9 @@ ion-icon {
     margin-bottom: 15px;
     display: block;
     text-align: justify;
+    @media (max-width: 700px) {
+        text-align: start;
+}
 }
 .aboutmes p {
     margin: 3%;
