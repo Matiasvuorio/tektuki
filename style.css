@@ -304,7 +304,7 @@ ion-icon {
 .subheading li {
     list-style:none;
     align-items: center;
-    flex-basis: 20%; /* Default for larger screens */
+    flex-basis: 20%;
     padding: 50px;
     overflow-x: hidden;
     
@@ -317,7 +317,7 @@ ion-icon {
     width: 100%;
     padding: 0;
     margin: 0;
-    justify-content: space-around; /* Single row on larger screens */
+    justify-content: space-around;
     flex-wrap: nowrap;
     
     @media (max-width: 700px) {
@@ -431,7 +431,7 @@ ion-icon {
 @media (max-width: 620px) {
     .container {
         display: grid;
-        grid-template-columns: 1fr; /* Change to 1 column on very small screens */
+        grid-template-columns: 1fr;
     }
 }
 .service-box{
