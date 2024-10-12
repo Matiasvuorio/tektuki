@@ -15,7 +15,6 @@ img{
 h1, h2, h3{
     font-weight: 700;
 }
-
 h3 {
     display: flex;
     justify-content: center;
@@ -25,7 +24,6 @@ h3 {
     padding-bottom: 0;
     margin-bottom: 0;
 }
-
 ul {
     display: flex;
     justify-content: space-between;
@@ -47,14 +45,12 @@ header {
     top: 0;
     z-index: 1000;
 }
-
 header .logo {
     padding-bottom: 60px;
     width: 175px;
     overflow-y: hidden;
     max-width: 100%;
 }
-
 header ion-icon{
     display: inline-block;
     vertical-align: middle;
@@ -72,13 +68,10 @@ nav{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    
 }
-
 nav li{
     display: inline-flex;
 }
-
 .phone {
     display: inline-block;
     align-items: center;
@@ -90,7 +83,6 @@ nav li{
     text-decoration: none;
     padding-right: 3%;
 }
-
 .phone a {
     text-decoration: none;
     color: inherit;
@@ -100,23 +92,7 @@ nav li{
 .buttons {
     display: flex; 
     flex-wrap: wrap; 
-    gap: 10px; 
-    
-}
-
-.button-container {
-    display: flex;
-    font-size: 13px;
-    justify-content: center; 
-    flex-wrap: wrap; 
-    gap: 10px;
-    margin-bottom: 2%;
-}
-.button-container a {
-    max-width: 470px;
-    @media (max-width: 481px) {
-        width: 390px;
-    }
+    gap: 10px;  
 }
 .phone-link2, .email-link2, .whatsapp-button {
     display: inline-flex;
@@ -130,7 +106,6 @@ nav li{
     margin: 5px; /* Space between buttons */
     transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
 }
-
 ion-icon {
     margin-right: 8px; /* Space between icon and text */
     font-size: 20px; /* Icon size */
@@ -159,7 +134,6 @@ ion-icon {
         box-sizing: border-box;
     }
 }
-
 .cta-button:hover {
     background-color: #285577;
 }
@@ -182,7 +156,6 @@ ion-icon {
 .contact-button:hover {
     background-color: #285577;
 }
-
 @media (max-width: 821px) {
     .contact-button,
     .cta-button {
@@ -206,7 +179,6 @@ ion-icon {
     color: white;
     position: relative;
     text-align: left; 
-
     @media (max-width: 700px) {
         align-items: end;
         justify-content: center;
@@ -225,10 +197,7 @@ ion-icon {
         height: 420px;
     }
     }
-
-
-
-.tausta {
+.background {
     position: relative;
     z-index: 1;
     @media (max-width: 700px) {
@@ -236,9 +205,8 @@ ion-icon {
         padding-bottom: 30px;
         padding: 0 10px;
     }
-
 }
-.tausta h1 {
+.background h1 {
     font-size: 3rem;
     font-weight: bold;
     margin: 0;
@@ -259,10 +227,8 @@ ion-icon {
         font-size: 24px;
         margin-top: 62%;
     }
-
-
 }
-.tausta p {
+.background p {
     font-size: 1.25rem;
     margin-bottom: 1.5em;
     color: #f0f0f0;
@@ -277,9 +243,7 @@ ion-icon {
         font-size: 17px;
     }
 }
-
-
-.väliotsikko {
+.subheading {
     text-align: center;
     justify-content: center;
     margin: 50px auto;
@@ -302,12 +266,8 @@ ion-icon {
         background-color: white;
         flex-wrap: wrap;
     }
-    /*@media (max-width: 1000px) {
-        margin: 0 auto; 
-    }*/
-
 }
-.väliotsikko h2 {
+.subheading h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 31px;
     letter-spacing: 1px;
@@ -323,7 +283,7 @@ ion-icon {
         line-height: 1,2;
     }
 }
-.väliotsikko h3 {
+.subheading h3 {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
     font-weight: 500;
@@ -337,7 +297,7 @@ ion-icon {
         line-height: 1,2;
     }
 }
-.väliotsikko li {
+.subheading li {
     list-style:none;
     align-items: center;
     flex-basis: 20%; /* Default for larger screens */
@@ -349,7 +309,7 @@ ion-icon {
         padding: 5px;
     }
 }
-.väliotsikko ul {
+.subheading ul {
     width: 100%;
     padding: 0;
     margin: 0;
@@ -363,7 +323,6 @@ ion-icon {
         margin-bottom: 0; 
     }
 }
-
 .symbolit{
     display: flex;
     justify-content: space-between;
@@ -380,8 +339,6 @@ ion-icon {
     list-style: none;
     flex-basis: 20%;
     overflow-y: hidden;
-
-
     @media (max-width: 700px) {
         padding: 5%;
         margin-rigt: 5px;
@@ -392,8 +349,7 @@ ion-icon {
         padding: 5px;
         flex-basis: 45;
     }
-}  
-
+}
 .symbolit ion-icon{
     background: #bdcfd6;
     padding: 40%;
@@ -443,7 +399,6 @@ ion-icon {
     font-weight: 700;
     background: white;
 }
-
 .services p {
     max-width: 900px;
     justify-content:center;
@@ -459,27 +414,22 @@ ion-icon {
     max-width: 1000px;
     margin-bottom: 1%;
 }
-
-
 @media (max-width: 983px) {
     .container {
         grid-template-columns: repeat(2, 1fr); 
         padding-left: 0;
         gap: 15px;
     }
-
     .service-box {
         padding: 1%;
     }
 }
-
 @media (max-width: 620px) {
     .container {
         display: grid;
         grid-template-columns: 1fr; /* Change to 1 column on very small screens */
     }
 }
-
 .service-box{
     background: white;
     display: flex;
@@ -494,7 +444,6 @@ ion-icon {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-
 .service-box p {
     margin: 0;
     padding: 10px 0;
@@ -502,7 +451,6 @@ ion-icon {
     font-size: 16px;
     color:#3c749d;
 }
-
 .service-box img {
     width: 100%;
     object-fit: cover;
@@ -511,8 +459,7 @@ ion-icon {
     border-radius: 5px;
     overflow-y: hidden;
 }
-
-.tietoaminusta{
+.aboutme{
     background-color: #f9f9f9;
     color: #333;
     font-size: 1rem;
@@ -528,7 +475,7 @@ ion-icon {
         margin-right: 5%;
     }
 }
-.tietoaminusta h2 {
+.aboutme h2 {
     text-align: center;
     letter-spacing: 1px;
     margin-top: 0;
@@ -537,17 +484,17 @@ ion-icon {
     margin-bottom: 20px;
     margin-top: 0;
 }
-.tietoaminusta .yläosa, .tietoaminusta .alempi {
+.aboutme .yläosa, .aboutme .alempi {
     margin-bottom: 20px;
 }
-.tietoaminusta .yläosa ul {
+.aboutme .yläosa ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
 }
-.tietoaminusta ol {
+.aboutme ol {
     padding-left: 20px;
     margin: 3%;
     text-align: justify;
@@ -557,8 +504,7 @@ ion-icon {
         padding-left: 0px;
 }
 }
-
-.tietoaminusta li {
+.aboutme li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -567,16 +513,14 @@ ion-icon {
     display: block;
     text-align: justify;
 }
-.tietoaminusta p {
+.aboutme p {
     margin: 3%;
     text-align: justify;
     max-width: 1300px;
-
-    @media (max-width: 450px) {
+        @media (max-width: 450px) {
         text-align:start;
 }
 }
-
 .icon-link {
     text-decoration: none;
     color: white;
@@ -584,7 +528,20 @@ ion-icon {
 .icon-link:hover {
     color:#3c749d;
 }
-
+.button-container {
+    display: flex;
+    font-size: 13px;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 10px;
+    margin-bottom: 2%;
+}
+.button-container a {
+    max-width: 470px;
+        @media (max-width: 481px) {
+        width: 390px;
+    }
+}
 footer{
     background-color: #333;
     padding: 10px 20px;
@@ -612,27 +569,7 @@ footer ion-icon {
     margin-bottom: 4px;
     font-size: 20px;
 
-}
-
-/*.button {
-    background-color: #3C749D;
-    color: white;
-    padding: 10px 50px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    padding-bottom: 20px;
-    font-weight: bold;
-}
-.button:hover {
-    background-color: #2a5276;
-}
-
-.button {
-    display: inline-block;
-    position: relative;
-}
- */    
+}  
 @keyframes slideIn {
     from {
       transform: translateX(100%);
