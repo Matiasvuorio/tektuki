@@ -12,11 +12,20 @@ body{
     background-color: #3c749d; /* Väripalettisi mukainen sininen */
     color: white;
     text-align: center;
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 10px 10px;
+    font-size: 100%;
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hieno varjostus */
-  }
+  
+  @media (max-width: 768px) {
+        font-size: 14px;
+        background-color: #427faa;
+        padding: 1px 1px;
+        margin-top: 0px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+}
+
 img{
     width: 100%;
     flex: 1;
