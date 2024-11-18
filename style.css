@@ -8,6 +8,15 @@ body{
     max-width: 100%;
     line-height: 1.6;
 }
+.holiday-banner {
+    background-color: #3c749d; /* Väripalettisi mukainen sininen */
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hieno varjostus */
+  }
 img{
     width: 100%;
     flex: 1;
