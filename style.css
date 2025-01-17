@@ -103,12 +103,12 @@ nav li{
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    margin: 5px; /* Space between buttons */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+    margin: 5px; 
+    transition: background-color 0.3s, transform 0.3s; 
 }
 ion-icon {
-    margin-right: 8px; /* Space between icon and text */
-    font-size: 20px; /* Icon size */
+    margin-right: 8px; 
+    font-size: 20px; 
 }
 .phone-link2:hover,
 .phone-link:hover,
