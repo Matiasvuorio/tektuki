@@ -10,8 +10,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers = "From: $email";
 
     if (mail($to, $subject, $body, $headers)) {
-        echo "Viesti lähetetty onnistuneesti!";
+        // Palataan index.html-sivulle ja lisätään URL-parametri onnistumisesta
+        header("Location: index.html?status=success");
+        exit();
     } else {
-        echo "Viestin lähettäminen epäonnistui. Yritä myöhemmin uudelleen.";
+        // Palataan index.html-sivulle ja lisätään URL-parametri epäonnistumisesta
+        header("Location: index.html?status=error");
+        exit();
     }
 }
+?>

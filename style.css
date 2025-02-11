@@ -583,11 +583,14 @@ input, textarea {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: large;
+    font-family: 'Poppins', sans-serif;
 }
 
 button {
     background-color: #bdcfd6;
     font-family: 'Poppins', sans-serif;
+    font-size: 16px;
     color: black;
     border: none;
     padding: 10px;
@@ -597,6 +600,9 @@ button {
 
 button:hover {
     background-color: #285577;
+}
+label {
+    font-size: 16px;
 }
 footer p {
     justify-content:center ;
