@@ -149,8 +149,8 @@ ion-icon {
         align-items: center;
         display: flex;
         justify-content: center;
-        flex: 1 1 48%; /* Grow, shrink, and take up 48% of the container */
-        box-sizing: border-box; /* Ensure padding is included in width */
+        flex: 1 1 48%;
+        box-sizing: border-box;
     }
 }
 .contact-button:hover {
