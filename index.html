@@ -153,6 +153,7 @@
     </a>
     <main>
     <h1>Haluatko, että olen sinuun yhteydessä?</h1>
+    <div id="status-message" style="display: none; padding: 10px; margin-bottom: 10px; border-radius: 5px;"></div>
     <form id="contact-form" action="https://www.jyväskyländigituki.fi/process_form.php" method="post">
         <label for="name">Nimi:</label>
         <input type="text" id="name" name="name" required>
@@ -165,6 +166,18 @@
         
         <button type="submit">Lähetä yhteydenotto pyyntö</button>
     </form>
+    <script>
+        document.getElementById("contact-method").addEventListener("change", function() {
+            var phoneContainer = document.getElementById("phone-container");
+            if (this.value === "phone") {
+                phoneContainer.style.display = "block";
+                document.getElementById("phone").setAttribute("required", "required");
+            } else {
+                phoneContainer.style.display = "none";
+                document.getElementById("phone").removeAttribute("required");
+            }
+        });
+        </script>
 </main>
 </div>
 </div>
@@ -172,14 +185,22 @@
     document.addEventListener("DOMContentLoaded", function() {
         const urlParams = new URLSearchParams(window.location.search);
         const status = urlParams.get("status");
-        
+        const statusMessage = document.getElementById("status-message");
+    
         if (status === "success") {
-            alert("Viesti lähetetty onnistuneesti!");
+            statusMessage.textContent = "Viesti lähetetty onnistuneesti!";
+            statusMessage.style.backgroundColor = "#d4edda";
+            statusMessage.style.color = "#155724";
+            statusMessage.style.display = "block";
         } else if (status === "error") {
-            alert("Viestin lähettäminen epäonnistui. Yritä myöhemmin uudelleen.");
+            statusMessage.textContent = "Viestin lähettäminen epäonnistui. Yritä myöhemmin uudelleen.";
+            statusMessage.style.backgroundColor = "#f8d7da";
+            statusMessage.style.color = "#721c24";
+            statusMessage.style.display = "block";
         }
     });
     </script>
+    
 <footer>
     <a href="index.html"> 
         <img src="Jyväskylän Tekninentuki.png" alt="yrityksen logo">
