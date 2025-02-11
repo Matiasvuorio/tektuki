@@ -151,6 +151,21 @@
         <ion-icon name="logo-whatsapp"></ion-icon>
         Ota yhteyttä WhatsAppissa
     </a>
+    <main>
+    <h1>Haluatko, että olen sinuun yhteydessä?</h1>
+    <form id="contact-form" action="process_form.php" method="post">
+        <label for="name">Nimi:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Sähköposti:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Viesti:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Lähetä yhteydenotto pyyntö</button>
+    </form>
+</main>
 </div>
 </div>
 

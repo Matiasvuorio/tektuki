@@ -548,6 +548,7 @@ ion-icon {
         width: 390px;
     }
 }
+
 footer{
     background-color: #333;
     padding: 10px 20px;
@@ -558,7 +559,45 @@ footer img {
     max-width: 300px;
     margin-right: 2%;
 }
+main {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
 
+form {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #bdcfd6;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #285577;
+}
 footer p {
     justify-content:center ;
     align-items: center;
