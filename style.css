@@ -8,6 +8,18 @@ body{
     max-width: 100%;
     line-height: 1.6;
 }
+.holiday-banner {
+    background-color: #3c749d;      /* Teemaan sopiva sininen */
+    color: #fff;                    /* Valkoinen teksti */
+    text-align: center;             /* Keskitys */
+    padding: 0.5em 1em;             /* Pieni sisennys */
+    font-size: 1rem;                /* Luettava koko */
+    font-weight: 600;               /* Tuhti fontti */
+    position: sticky;               /* Pysy ylhäällä skrollatessa */
+    top: 0;                         /* Liimautuu sivun yläreunaan */
+    z-index: 1100;                  /* Varmistaa bannerin päällimmäisyyden */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
 img{
     width: 100%;
     flex: 1;
