@@ -80,11 +80,12 @@ $prevMonthStart = $monthStart->modify('-1 month');
 $prevMonthEnd   = $monthStart->modify('-1 day');
 
 // --- SARJAT ---
-$viewsSeries = array_column($stats, 'views', 'Y-m-d');
-$uniqsSeries = array_column($stats, 'uniques', 'Y-m-d');
 // PHP ei tue yllä suoraan: tehdään perinteisesti
 $viewsSeries = []; $uniqsSeries = [];
-foreach ($stats as $d => $row) { $viewsSeries[$d]=(int)$row['views']; $uniqsSeries[$d]=(int)$row['uniques']; }
+foreach ($stats as $d => $row) {
+  $viewsSeries[$d]   = (int)$row['views'];
+  $uniqsSeries[$d]   = (int)$row['uniques'];
+}
 
 // --- AGGREGAATIT ---
 $todayViews   = $viewsSeries[$todayStr]   ?? 0;

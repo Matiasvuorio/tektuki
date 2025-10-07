@@ -31,7 +31,22 @@ if ($dnt === '1') {
 }
 
 // Päivämäärä ja yksinkertainen "uniikki-avain" (IP+UA+päivä)
-$ip    = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+$ip = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+
+// *** Lisäys: tunnista kävijän IP reverse proxyjen takaa ***
+if (!empty($_SERVER['HTTP_CF_CONNECTING_IP'])) {
+    // Cloudflare
+    $ip = $_SERVER['HTTP_CF_CONNECTING_IP'];
+} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+    // Yleinen reverse proxy / load balancer
+    $parts = array_map('trim', explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']));
+    $candidate = $parts[0] ?? '';
+    if (filter_var($candidate, FILTER_VALIDATE_IP)) {
+        $ip = $candidate;
+    }
+}
+// *** Lisäys päättyy ***
+
 $today = (new DateTimeImmutable('today'))->format('Y-m-d');
 $uniqKey = sha1($ip . '|' . $ua . '|' . $today);
 
@@ -85,7 +100,6 @@ if ($fp) {
 // Palauta 1x1 GIF ja estä välimuisti
 servePixel();
 exit;
-
 
 // ---- helper ----
 function servePixel(): void {
