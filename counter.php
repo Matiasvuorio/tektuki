@@ -23,6 +23,12 @@ if (preg_match($botPattern, $ua)) {
     servePixel();
     exit;
 }
+$dnt = $_SERVER['HTTP_DNT'] ?? '';
+if ($dnt === '1') {
+    // Käyttäjä toivoo, ettei häntä seurata → älä laske
+    servePixel();
+    exit;
+}
 
 // Päivämäärä ja yksinkertainen "uniikki-avain" (IP+UA+päivä)
 $ip    = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
