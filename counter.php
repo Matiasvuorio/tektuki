@@ -1,25 +1,96 @@
 <?php
+// counter.php — yksinkertainen evästeetön kävijälaskuri
+// - Laskee päiväkohtaiset näyttökerrat (views) ja uniikit (uniques)
+
+declare(strict_types=1);
 date_default_timezone_set('Europe/Helsinki');
-$statsFile=__DIR__.'/stats.json';
-$fp=fopen($statsFile,'c+');
-if($fp){
-    flock($fp,LOCK_EX);
-    $size=filesize($statsFile);
-    $stats=[];
-    if($size>0){
+
+// --- asetukset ---
+const STATS_FILE   = __DIR__ . '/stats.json';
+const DAYS_TO_KEEP = 90; // säilytä viimeiset N päivää
+// ------------------
+
+// HEAD-pyyntö tai tyhjä UA → älä laske, mutta palauta pikseli
+$ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
+if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'HEAD' || $ua === '') {
+    servePixel();
+    exit;
+}
+
+// Perusbottisuodatus (kevyt lista)
+$botPattern = '~(bot|crawler|spider|archiver|preview|slurp|facebook|bingpreview|monitor|statuscake|uptime|validator|whatsapp|telegram)~i';
+if (preg_match($botPattern, $ua)) {
+    servePixel();
+    exit;
+}
+
+// Päivämäärä ja yksinkertainen "uniikki-avain" (IP+UA+päivä)
+$ip    = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+$today = (new DateTimeImmutable('today'))->format('Y-m-d');
+$uniqKey = sha1($ip . '|' . $ua . '|' . $today);
+
+// Lue olemassa oleva stats.json
+$stats = []; // muoto: 'YYYY-MM-DD' => ['views'=>int,'uniques'=>int,'seen'=>['hash'=>true,...]]
+
+$fp = @fopen(STATS_FILE, 'c+');
+if ($fp) {
+    flock($fp, LOCK_EX);
+
+    $size = filesize(STATS_FILE);
+    if ($size > 0) {
         rewind($fp);
-        $data=json_decode(fread($fp,$size),true);
-        if(is_array($data))$stats=$data;
+        $json = fread($fp, $size);
+        $data = json_decode($json, true);
+        if (is_array($data)) {
+            $stats = $data;
+        }
     }
-    $today=date('Y-m-d');
-    if(!isset($stats[$today]))$stats[$today]=0;
-    $stats[$today]++;
-    ftruncate($fp,0);
+
+    // Siivoa vanhat päivät
+    $cutoff = (new DateTimeImmutable('today -' . (DAYS_TO_KEEP - 1) . ' days'))->format('Y-m-d');
+    foreach ($stats as $day => $_row) {
+        if ($day < $cutoff) unset($stats[$day]);
+    }
+
+    // Alusta nykyinen päivä
+    if (!isset($stats[$today])) {
+        $stats[$today] = ['views' => 0, 'uniques' => 0, 'seen' => []];
+    }
+
+    // Lisää näyttökerta
+    $stats[$today]['views']++;
+
+    // Päiväuniikki
+    if (empty($stats[$today]['seen'][$uniqKey])) {
+        $stats[$today]['seen'][$uniqKey] = true;
+        $stats[$today]['uniques']++;
+    }
+
+    // Kirjoita takaisin
+    ftruncate($fp, 0);
     rewind($fp);
-    fwrite($fp,json_encode($stats));
+    fwrite($fp, json_encode($stats, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
     fflush($fp);
-    flock($fp,LOCK_UN);
+
+    flock($fp, LOCK_UN);
     fclose($fp);
 }
-header('Content-Type: image/gif');
-echo base64_decode('R0lGODlhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=');
+
+// Palauta 1x1 GIF ja estä välimuisti
+servePixel();
+exit;
+
+
+// ---- helper ----
+function servePixel(): void {
+    // läpinäkyvä 1x1 GIF
+    $gif = base64_decode('R0lGODlhAQABAPAAAP///wAAACwAAAAAAQABAEACAkQBADs=');
+
+    header('Content-Type: image/gif');
+    header('Content-Length: ' . strlen($gif));
+    header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
+    header('Pragma: no-cache');
+    header('Expires: 0');
+
+    echo $gif;
+}
