@@ -153,34 +153,6 @@
         <ion-icon name="logo-whatsapp"></ion-icon>
         Ota yhteyttä WhatsAppissa
     </a>
-    <main>
-    <h1>Haluatko, että olen sinuun yhteydessä?</h1>
-    <div id="status-message" style="display: none; padding: 10px; margin-bottom: 10px; border-radius: 5px;"></div>
-    <form id="contact-form" action="https://www.jyväskyländigituki.fi/process_form.php" method="post">
-        <label for="name">Nimi:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Sähköposti:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="message">Viesti:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        
-        <button type="submit">Lähetä yhteydenottopyyntö</button>
-    </form>
-    <script>
-        document.getElementById("contact-method").addEventListener("change", function() {
-            var phoneContainer = document.getElementById("phone-container");
-            if (this.value === "phone") {
-                phoneContainer.style.display = "block";
-                document.getElementById("phone").setAttribute("required", "required");
-            } else {
-                phoneContainer.style.display = "none";
-                document.getElementById("phone").removeAttribute("required");
-            }
-        });
-        </script>
-</main>
 </div>
 </div>
 <script>
@@ -223,6 +195,7 @@
         </a>
     </p>
     <p>Y-tunnus: 3223210-5</p>
+    <p class="copy">© <span id="year"></span> Jyväskylän Digituki</p>
 
 </footer>
 <img src="/counter.php"
@@ -232,5 +205,11 @@
      referrerpolicy="no-referrer"
      style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;border:0;"
      aria-hidden="true" role="presentation">
+     <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var el = document.getElementById("year");
+    if (el) el.textContent = new Date().getFullYear();
+  });
+</script>
 </body>
 </html>
